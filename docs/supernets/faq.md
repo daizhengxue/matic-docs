@@ -232,10 +232,6 @@ Yes, Supernets allows for the decoupling of the native gas token and the staking
 
 Decoupling the gas token and the staking token provides greater flexibility and enables more use cases for the network. However, it's important to note that the specifics of how this is configured may depend on the specific implementation of the network you're using.
 
-## How can I create the initial supply of tokens when launching a new Supernet instance?
-
-To create the initial supply of tokens when launching a new Supernet instance, premining or minting can be used. This can help ensure that the network has the necessary tokens to facilitate transactions and operations.
-
 ## Why does the Exit process revert when onL2StateReceive fails?
 
 The system prevents potential double spending and other attacks by marking any exit event that fails to be processed by the rootchain predicate as "failed." Without this safeguard, the same event could be re-executed multiple times.
@@ -246,7 +242,7 @@ Checkpoints are currently dispatched at the end of each epoch or every 900 block
 
 ## How are native gas fungible tokens allocated during the genesis of the childchain?
 
-At the Supernet's inception, designated accounts receive specific amounts of native gas fungible tokens. If the tokens are non-mintable, premining at genesis is prohibited, except for the 0x0 address. These accounts must bridge assets from the rootchain. Conversely, mintable tokens allow for arbitrary premining on the Supernets during genesis.
+At the Supernet's inception, designated accounts receive specific amounts of native gas fungible tokens. If the tokens are non-mintable, premining at genesis is prohibited, except for the `0x0` address. These accounts must bridge assets from the rootchain. Conversely, mintable tokens allow for arbitrary premining on the Supernets during genesis.
 
 ## Is it necessary to mint new tokens using the associated ERC20 contract each time native gas fungible tokens are spent?
 

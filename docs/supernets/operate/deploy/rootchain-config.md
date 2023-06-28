@@ -150,16 +150,16 @@ If you have already deployed the StakeManager, you may skip the step and move on
 
 :::
 
-If the `StakeManager` hasn't been deployed to the rootchain, you need to carry out this step. This command also contains a test flag. This flag is strictly for testing purposes, and its usage results in deploying a mock ERC-20 token that will serve for staking.
+If the `StakeManager` hasn't been deployed to the rootchain, you need to carry out this step.
+> This command also contains a test flag. This flag is strictly for testing purposes, and its usage results in deploying a mock ERC-20 token that will serve for staking.
 
-  ```bash
-  ./polygon-edge polybft stake-manager-deploy \
-  --private-key <hex_encoded_rootchain_account_private_key> \
-  --genesis ./genesis.json \
-  --jsonrpc http://127.0.0.1:8545 \
-  --stake-token 0xaddressOfStakeToken \
-  --test
-  ```
+```bash
+./polygon-edge polybft stake-manager-deploy \
+--private-key <hex_encoded_rootchain_account_private_key> \
+--genesis ./genesis.json \
+--jsonrpc http://127.0.0.1:8545 \
+--stake-token 0xaddressOfStakeToken \
+```
 
 <details>
 <summary>Flags ↓</summary>
@@ -396,16 +396,16 @@ If you have already deployed the StakeManager, you may skip the step and move on
 
 :::
 
-This command includes a test flag, which is intended solely for testing scenarios. When this flag is used, a mock ERC-20 token is deployed for staking. However, in non-testing environments, remember to specify the `stake-token` flag with the address of the token that's already deployed on the rootchain and will be used for staking.
+If the `StakeManager` hasn't been deployed to the rootchain, you need to carry out this step.
+> This command also contains a test flag. This flag is strictly for testing purposes, and its usage results in deploying a mock ERC-20 token that will serve for staking.
 
-  ```bash
-  ./polygon-edge polybft stake-manager-deploy \
-  --deployer-key <hex_encoded_rootchain_account_private_key> \
-  --genesis ./genesis.json \
-  --jsonrpc http://127.0.0.1:8545 \
-  --stake-token 0xaddressOfStakeToken \
-  --test
-  ```
+```bash
+./polygon-edge polybft stake-manager-deploy \
+--deployer-key <hex_encoded_rootchain_account_private_key> \
+--genesis ./genesis.json \
+--jsonrpc http://127.0.0.1:8545 \
+--stake-token 0xaddressOfStakeToken \
+```
 
 <details>
 <summary>Flags ↓</summary>
