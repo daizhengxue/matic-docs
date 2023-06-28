@@ -53,7 +53,7 @@ To create the chain configuration, we use the `polygon-edge genesis` command, wh
 | `--block-time`                             | Predefined period determining block creation frequency    | `--block-time 5s`                                |
 | `--epoch-reward`                           | Reward size for block sealing                             | `--epoch-reward 1000000000000000000`             |
 | `--trieroot`                               | Trie root from the corresponding triedb                   | `--trie-root 0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef`|
-| `--native-token-config`                    | Configuration of native token                             | `--native-token-config "MyToken:MTK:18:true/false"`         |
+| `--native-token-config`                    | Configuration of native token                             | `--native-token-config "MyToken:MTK:18:true/false[:owner's address]"`         |
 | `--reward-token-code`                      | Hex encoded reward token byte code                        | `--reward-token-code 0x606060...`                |
 | `--reward-wallet`                          | Configuration of reward wallet                            | `--reward-wallet 0x742d35Cc6634C0532925a3b844Bc454e4438f44e:1000000000000000000`|
 | `--grpc-address`                           | The GRPC interface     
@@ -126,7 +126,7 @@ Users can assign a custom `chain-id` to their Supernet via the genesis command. 
 
 > There is also an `--owner` flag only applicable for mintable native tokens and designates the account that has the permission to mint and burn tokens, in addition to the predicate.
 
-For example, the following command creates a native token named `MyToken` with the symbol `MTK`, `18` decimal places, and a total supply of `1,000,000` tokens. It also premines `1,000` tokens to the account at address `0x61324166B0202DB1E7502924326262274Fa4358F`.
+For example, the following command creates a native token named `MyToken` with the symbol `MTK`, `18` decimal places, and a total supply of `1,000,000` tokens. It also premines `1,000` tokens to the account at address `0x61324166B0202DB1E7502924326262274Fa4358F`.  Additionally, it sets the owner of the mintable token to be the account at address `0x8eD7e2F79157F7DA803c3f4fb8E5eB3A571758c9`.
 
 <details>
 <summary>Example ↓</summary>
@@ -136,7 +136,7 @@ For example, the following command creates a native token named `MyToken` with t
     --validators-path ./ --validators-prefix test-chain- \
     --consensus polybft \
     --premine 0x61324166B0202DB1E7502924326262274Fa4358F:1000000000000000000000 \
-    --native-token-config "MyToken:MTK:18:true" \
+    --native-token-config "MyToken:MTK:18:true:0x8eD7e2F79157F7DA803c3f4fb8E5eB3A571758c9" \
     --reward-wallet 0x61324166B0202DB1E7502924326262274Fa4358F:1000000
 ```
 
