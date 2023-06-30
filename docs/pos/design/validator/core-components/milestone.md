@@ -15,7 +15,7 @@ keywords:
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-The **Milestone feature is a crucial component that offers a high level of determinism and finality within a relatively short timeframe, averaging between 80 to 100 seconds**. It guarantees the immutability and irreversibility of a specific block in a distributed consensus system. To achieve this, the consensus algorithm requires the active participation of validator nodes within the network.
+The **Milestone feature is a crucial component that offers a high level of determinism and finality within a relatively short timeframe, averaging between 80 to 100 seconds**. It guarantees the immutability and irreversibility of a specific block in a distributed consensus system like the Polygon PoS network. To achieve this, the consensus algorithm requires the active participation of validator nodes within the network.
 
 When a new block is proposed, all validator nodes in the network engage in a voting process to determine its validity and ultimate finalization. Each validator node casts their vote based on the block hash of the proposed block. **If the block receives more than two-thirds (2/3) of the total votes from the participating validator nodes, it attains the required threshold for finality**.
 
