@@ -116,6 +116,8 @@ module.exports = {
         "tools/ethereum/replit",
       ],
     },
+    "tools/miscellaneous/matic-faucet",
+    "tools/miscellaneous/polygon-gas-station",
     {
       type: "category",
       label: "Oracles",
@@ -179,17 +181,6 @@ module.exports = {
         },
         "tools/data/covalent",
         //"pos/develop/dapp-fauna-polygon-react",
-      ],
-    },
-    {
-      type: "category",
-      label: "Miscellaneous",
-      link: {
-        type: "generated-index",
-      },
-      items: [
-        "tools/miscellaneous/matic-faucet",
-        "tools/miscellaneous/polygon-gas-station",
       ],
     },
     {

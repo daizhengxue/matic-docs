@@ -19,7 +19,7 @@ The **Milestone feature is a crucial component that offers a high level of deter
 
 When a new block is proposed, all validator nodes in the network engage in a voting process to determine its validity and ultimate finalization. Each validator node casts its vote based on the block hash of the proposed block. **If the block receives more than two-thirds (2/3) of the total votes from the participating validator nodes, it attains the required threshold for finality**.
 
-When a block obtains this majority consensus and becomes final, it secures its place within the blockchain. **This means that the finalized block cannot be altered, reversed, or tampered with in any manner going forward**.
+When a block achieves finality through majority consensus, it is added to the blockchain and becomes **unalterable, irreversible, and immune to any form of tampering**.
 
 Determining finality through the Milestone feature ensures the integrity and immutability of the blockchain, fostering a robust and secure environment. It establishes a clear and unalterable history of transactions and events, enabling participants to rely on the validity and permanence of the data stored within the blockchain.
 
@@ -58,7 +58,7 @@ type Milestone {
 
 **&rarr;** Finally, the Bor chain queries the latest `Milestone` from Heimdall and stores it in the Bor database.
 
-## Usecase of Milestones in Bor
+## Use Cases of Milestones in Bor
 
 1. **Chain Validation during Block Import**: When a Bor node receives incoming blocks to be added to its blockchain, it performs a thorough validation process to ensure the consistency and correctness of the chain. One critical step in this validation is checking the incoming chain against the latest stored Milestone. It only accepts the incoming chain if it matches with the latest Milestone.
 
