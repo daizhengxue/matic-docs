@@ -17,11 +17,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 The **Milestone feature is a crucial component that offers a high level of determinism and finality within a relatively short timeframe, averaging between 80 to 100 seconds**. It guarantees the immutability and irreversibility of a specific block in a distributed consensus system like the Polygon PoS network. The consensus algorithm requires the active participation of validator nodes within the network to achieve this.
 
-When a new block is proposed, all validator nodes in the network engage in a voting process to determine its validity and ultimate finalization. Each validator node casts its vote based on the block hash of the proposed block. **If the block receives more than two-thirds (2/3) of the total votes from the participating validator nodes, it attains the required threshold for finality**.
+When a new block is proposed, all validator nodes in the network engage in a voting process to determine its validity and ultimate finalization. Each validator node casts its vote based on the block hash of the proposed block. **If the proposed block receives more than two-thirds (2/3) of all votes, it reaches a supermajority, which is the requisite level of consensus for finality.**
 
 When a block achieves finality through majority consensus, it is added to the blockchain and becomes **unalterable, irreversible, and immune to any form of tampering**.
-
-Determining finality through the Milestone feature ensures the integrity and immutability of the blockchain, fostering a robust and secure environment. It establishes a clear and unalterable history of transactions and events, enabling participants to rely on the validity and permanence of the data stored within the blockchain.
 
 ## Types
 
@@ -60,6 +58,6 @@ type Milestone {
 
 ## Use Cases of Milestones in Bor
 
-1. **Chain Validation during Block Import**: When a Bor node receives incoming blocks to be added to its blockchain, it performs a thorough validation process to ensure the consistency and correctness of the chain. One critical step in this validation is checking the incoming chain against the latest stored Milestone. It only accepts the incoming chain if it matches with the latest Milestone.
+1. **Chain Validation during Block Imports**: When a Bor node receives incoming blocks, it uses Milestones as a key validation tool. The node compares the latest stored Milestone with the incoming blocks. Only if the incoming blocks align with the latest Milestone—indicating its validity and consistency with the existing blockchain—does the Bor node accept and add it to the chain.
 
-2. **Finalized Block Delivery to Users**: In addition to chain validation during block import, the latest Milestone in Bor serves as a reference point for delivering finalized blocks to users. Once a block achieves finality through the consensus mechanism, it becomes an immutable part of the blockchain and can be considered fully validated.
+2. **Finalized Block Delivery to Users**: In addition to chain validation during block imports, the latest Milestone in Bor serves as a reference point for delivering finalized blocks to users.
