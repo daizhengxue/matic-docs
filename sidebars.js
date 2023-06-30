@@ -105,17 +105,6 @@ module.exports = {
     },
     {
       type: "category",
-      label: "Faucets",
-      link: {
-        type: "generated-index",
-      },
-      items: [
-        "tools/faucets/matic-faucet",
-        "tools/faucets/polygon-gas-station",
-      ],
-    },
-    {
-      type: "category",
       label: "Ethereum Tools",
       link: {
         type: "generated-index",
@@ -190,6 +179,17 @@ module.exports = {
         },
         "tools/data/covalent",
         //"pos/develop/dapp-fauna-polygon-react",
+      ],
+    },
+    {
+      type: "category",
+      label: "Miscellaneous",
+      link: {
+        type: "generated-index",
+      },
+      items: [
+        "tools/miscellaneous/matic-faucet",
+        "tools/miscellaneous/polygon-gas-station",
       ],
     },
     {
@@ -351,6 +351,7 @@ module.exports = {
                 "pos/design/validator/core-components/heimdall-chain",
                 "pos/design/validator/core-components/bor-chain",
                 "pos/design/validator/core-components/checkpoint-mechanism",
+                "pos/design/validator/core-components/milestone",
                 "pos/design/validator/core-components/key-management",
                 "pos/design/validator/core-components/derivatives",
                 "pos/design/validator/core-components/proposers-producers-selection",

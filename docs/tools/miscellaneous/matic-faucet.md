@@ -1,7 +1,7 @@
 ---
 id: matic-faucet
 title: MATIC Faucet
-sidebar_label: Test MATIC Faucet
+sidebar_label: MATIC Faucet
 description: Request MATIC tokens on the Mumbai Testnet using Polygon, Alchemy, and Quicknode.
 keywords:
   - docs

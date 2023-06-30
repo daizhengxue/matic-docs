@@ -6,7 +6,7 @@ export const firstRow = [
     },
     {
         title: "Get Test MATIC",
-        linkUrl: "/docs/tools/faucets/matic-faucet",
+        linkUrl: "/docs/tools/miscellaneous/matic-faucet",
         imageUrl: "/img/miden-logo.png",
     },
     {
